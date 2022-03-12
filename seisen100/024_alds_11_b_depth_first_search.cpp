@@ -14,9 +14,9 @@ void dfs(vector<vector<int> > &G, int x) {
   T++;
   F.at(x) = T;
   
-  for (int nx : G.at(x)) {
-    if (seen.at(nx)) continue;
-    dfs(G, nx);
+  rep(i,0,G.at(x).size()) {
+    if (seen.at(G.at(x).at(i))) continue;
+    dfs(G, G.at(x).at(i));
   }
   
   T++;
@@ -51,4 +51,3 @@ int main() {
     cout << i << " " << F.at(i) << " " << C.at(i) << endl;
   }
 }
-
