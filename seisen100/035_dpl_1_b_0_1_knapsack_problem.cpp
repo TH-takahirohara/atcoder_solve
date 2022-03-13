@@ -19,12 +19,8 @@ int main() {
   
   rep(i,1,N+1) {
     rep(j,1,W+1) {
-      if (j - Ws.at(i) < 0) {
-        dp.at(i).at(j) = max(dp.at(i-1).at(j), dp.at(i).at(j-1));
-      } else {
-        dp.at(i).at(j) = max(dp.at(i-1).at(j-Ws.at(i))+V.at(i), dp.at(i-1).at(j));
-        dp.at(i).at(j) = max(dp.at(i).at(j), dp.at(i).at(j-1));
-      }
+      if (j - Ws.at(i) < 0) dp.at(i).at(j) = dp.at(i-1).at(j);
+      else dp.at(i).at(j) = max(dp.at(i-1).at(j-Ws.at(i))+V.at(i), dp.at(i-1).at(j));
     }
   }
   
