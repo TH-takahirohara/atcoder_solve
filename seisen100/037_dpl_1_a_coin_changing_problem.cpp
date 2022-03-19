@@ -6,7 +6,6 @@ typedef long long ll;
 
 // N: 金額、M: コインの種類数
 int N, M;
-int INF = 1000000;
 
 int main() {
   cin >> N >> M;
