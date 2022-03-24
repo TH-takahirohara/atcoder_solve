@@ -9,7 +9,6 @@ vector<vector<int> > dist;
 vector<vector<int> > dp;
 int INF = 1000000000;
 int V, E;
-int end_v;
 
 int rec(int bit, int v) {
   if (dp.at(bit).at(v) != -1 && dp.at(bit).at(v) < INF) {
@@ -17,7 +16,7 @@ int rec(int bit, int v) {
   }
   
   if (bit==(1<<v)) {
-    if (dist.at(end_v).at(v) != -1) return dist.at(end_v).at(v);
+    if (dist.at(0).at(v) != -1) return dist.at(0).at(v);
     else return INF;
   }
   
