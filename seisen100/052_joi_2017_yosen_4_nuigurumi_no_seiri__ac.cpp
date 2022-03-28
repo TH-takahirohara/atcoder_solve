@@ -1,4 +1,5 @@
 // 数値が出てくる個数について累積和の考え方で対処することで、TLEを回避できるようになりACとなった。
+
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
