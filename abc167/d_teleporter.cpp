@@ -38,8 +38,6 @@ int main() {
     nowp = nxp;
   }
   
-  //cout << loop_sta_ind << " " << loop_sta_cnt << " " << loop_len << endl;
-  
   if (K < loop_sta_cnt) {
     ll np = 0;
     ll nx = 01;
