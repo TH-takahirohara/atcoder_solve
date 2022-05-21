@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
-#include <atcoder/segtree>
+// #include <atcoder/segtree>
 using namespace std;
-using namespace atcoder;
+// using namespace atcoder;
 typedef long long ll;
 typedef unsigned long long ull;
 #define rep(i,a,b) for(int i=a;i<b;i++)
