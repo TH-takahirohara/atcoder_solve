@@ -1,3 +1,5 @@
+// 072 "何通りか"の感覚／バックトラック
+// 深さ優先探索に「座標の配列（それまでに到達した座標をtrueとしたもの）」を持たせて強引の解いた。
 #include <bits/stdc++.h>
 #include <atcoder/segtree>
 using namespace std;
