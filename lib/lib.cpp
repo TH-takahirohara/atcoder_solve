@@ -9,6 +9,8 @@ typedef unsigned long long ull;
 // 桁数指定： cout << fixed << setprecision(10)
 
 double PI = 3.14159265359;
+vector<int> dc = {1, 0, -1, 0};
+vector<int> dr = {0, -1, 0, 1};
 
 // 逆元を求める関数
 long long modinv(long long a, long long m) {
