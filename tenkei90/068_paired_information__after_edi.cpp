@@ -1,4 +1,5 @@
 // 068 クエリ先読み／std::set
+// 解説・解答コードを見た後に実装
 #include <bits/stdc++.h>
 #include <atcoder/segtree>
 using namespace std;
