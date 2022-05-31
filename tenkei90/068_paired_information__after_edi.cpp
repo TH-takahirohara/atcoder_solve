@@ -82,7 +82,7 @@ int main() {
       if (!uf.issame(x,y)) {
         cout << "Ambiguous" << endl;
       } else if (x%2 == y%2) {
-        cout << v + (A.at(y) - A.at(x)) << endl;
+        cout << A.at(y) + (v - A.at(x)) << endl;
       } else {
         cout << A.at(y) - (v - A.at(x)) << endl;
       }
