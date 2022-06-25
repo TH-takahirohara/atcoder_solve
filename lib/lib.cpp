@@ -8,6 +8,7 @@ typedef unsigned long long ull;
 #define fore(i,a) for(auto &i:a)
 // 桁数指定： cout << fixed << setprecision(10)
 
+ll MOD = 1000000007LL;
 double PI = 3.14159265359;
 vector<int> dc = {1, 0, -1, 0};
 vector<int> dr = {0, -1, 0, 1};
@@ -25,7 +26,6 @@ long long modinv(long long a, long long m) {
     return u;
 }
 
-ll MOD = 1000000007LL;
 vector<long long> fact_inv, inv, Com;
 
 /*  init_nCk :二項係数のための前処理
