@@ -10,8 +10,8 @@ typedef unsigned long long ull;
 
 ll MOD = 998244353LL;
 double PI = 3.14159265359;
-vector<int> dc = {1, 0, -1, 0};
-vector<int> dr = {0, -1, 0, 1};
+vector<int> dc = {1, 1,  0, -1, -1, -1, 0, 1};
+vector<int> dr = {0, -1, -1, -1, 0, 1, 1, 1};
 
 // 逆元を求める関数
 long long modinv(long long a, long long m) {
@@ -99,6 +99,25 @@ long long modpow(long long a, long long n, long long mod) {
 }
 
 int main() {
+  ull N,X;
+  cin >> N >> X;
   
+  vector<ull> A(N), B(N);
+  rep(i,0,N) cin >> A.at(i) >> B.at(i);
+  
+  vector<ll> soko(N);
+  
+  ull minb = 1000000000000000ULL;
+  ull now = 0;
+  ull ans = 10000000000000000000ULL;
+  rep(i,0,N) {
+    //if (i >= X) break;
+    now += A.at(i) + B.at(i);
+    minb = min(minb, B.at(i));
+    
+    if (i+1 < X) ans = min(ans, now + minb * (X - (i+1)));
+    else ans = min(ans, now);
+  }
+  cout << ans << endl;
 }
 

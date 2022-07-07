@@ -99,6 +99,28 @@ long long modpow(long long a, long long n, long long mod) {
 }
 
 int main() {
+  int K;
+  cin >> K;
   
+  if (K < 60) {
+    string fun;
+    if (K < 10) {
+      fun = "0" + to_string(K);
+    } else {
+      fun = to_string(K);
+    }
+    cout << "21:" + fun << endl;
+    return 0;
+  } else {
+    string fun;
+    K=K-60;
+    if (K < 10) {
+      fun = "0" + to_string(K);
+    } else {
+      fun = to_string(K);
+    }
+    cout << "22:" + fun << endl;
+    return 0;
+  }
 }
 

@@ -10,8 +10,8 @@ typedef unsigned long long ull;
 
 ll MOD = 998244353LL;
 double PI = 3.14159265359;
-vector<int> dc = {1, 0, -1, 0};
-vector<int> dr = {0, -1, 0, 1};
+vector<int> dc = {1, 1,  0, -1, -1, -1, 0, 1};
+vector<int> dr = {0, -1, -1, -1, 0, 1, 1, 1};
 
 // 逆元を求める関数
 long long modinv(long long a, long long m) {
@@ -99,6 +99,37 @@ long long modpow(long long a, long long n, long long mod) {
 }
 
 int main() {
+  int N;
+  cin >> N;
   
+  //vector<vector<int>> vec(N, vector<int>(N));
+  vector<string> vec(N);
+  rep(i,0,N) cin >> vec.at(i);
+  
+  ll maxn = 0LL;
+  rep(i,0,N) {
+    rep(j,0,N) {
+      int nowi = i;
+      int nowj = j;
+      rep(k,0,8) {
+        string str;
+        int drr = dr.at(k);
+        int dcc = dc.at(k);
+        rep(l,0,N) {
+          int nxi, nxj;
+          if (nowi + drr * l > 0) nxi = (nowi + drr * l) % N;
+          else nxi = (nowi + drr * l + N) % N;
+          if (nowj + dcc * l > 0) nxj = (nowj + dcc * l) % N;
+          else nxj = (nowj + dcc * l + N) % N;
+          //cout << nxi << " " << nxj << endl;
+          str += vec.at(nxi).at(nxj);
+        }
+        
+        ll tmp = stoll(str);
+        maxn = max(maxn, tmp);
+      }
+    }
+  }
+  cout << maxn << endl;
 }
 
