@@ -98,6 +98,14 @@ long long modpow(long long a, long long n, long long mod) {
     return res;
 }
 
+template<class T> bool chmin(T& a, T b) {
+  if (a > b) {
+    a = b;
+    return true;
+  }
+  else return false;
+}
+
 int main() {
   
 }
