@@ -24,11 +24,7 @@ int main() {
       st.insert(x);
     } else {
       auto it = st.upper_bound(x);
-      if (st.size()==0) {
-        cout << L << endl;
-      } else {
-        cout << *it - *(--it) << endl;
-      }
+      cout << *it - *(--it) << endl;
     }
   }
 }
