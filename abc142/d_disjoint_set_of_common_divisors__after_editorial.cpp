@@ -1,3 +1,5 @@
+// 最初、公約数を求めてそれらから答えを求めようとしたが、公約数の求め方に問題がありWAを出していた。
+// 解説を見て、そのやり方でACした。
 #include <bits/stdc++.h>
 // #include <atcoder/segtree>
 using namespace std;
