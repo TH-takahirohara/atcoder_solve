@@ -25,12 +25,11 @@ int main() {
     vector<bool> seen(N);
     queue<pair<int,int>> que;
     que.push(make_pair(i,0));
+    seen.at(i) = true;
     while (!que.empty()) {
       auto p = que.front(); que.pop();
       int v = p.first;
       int kyori = p.second;
-
-      seen.at(v) = true;
 
       for (auto nv : G.at(v)) {
         if (seen.at(nv)) continue;
