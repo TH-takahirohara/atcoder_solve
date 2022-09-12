@@ -29,13 +29,13 @@ int main() {
     auto p = vec.at(i);
     ll day = p.at(0);
     ll co = p.at(1);
-    ll cnt = p.at(2);
+    ll sign = p.at(2);
     if (cur == -1) {
       cur = day;
       sum += co;
     } else {
       ans += (day - cur) * min(C, sum);
-      sum += co * cnt;
+      sum += co * sign;
       cur = day;
     }
   }
