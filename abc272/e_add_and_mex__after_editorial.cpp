@@ -1,4 +1,5 @@
 // 解説後AC。調和級数の考え方を使うと、計算量がO(NlogN)に収まるため、解ける。
+// （自分の解答では、判定にsetを使っているためO(NlogNlogN)ではあるが、間に合った。）
 #include <bits/stdc++.h>
 // #include <atcoder/segtree>
 using namespace std;
