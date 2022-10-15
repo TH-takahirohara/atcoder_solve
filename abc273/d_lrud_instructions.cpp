@@ -19,9 +19,7 @@ int main() {
     cin >> r >> c;
     if (!mpyoko.count(r)) {
       set<int> tmpst;
-      tmpst.insert(0);
-      tmpst.insert(C+1);
-      tmpst.insert(c);
+      tmpst.insert({0,C+1,c});
       mpyoko[r] = tmpst;
     } else {
       mpyoko[r].insert(c);
@@ -29,9 +27,7 @@ int main() {
 
     if (!mptate.count(c)) {
       set<int> tmpst;
-      tmpst.insert(0);
-      tmpst.insert(R+1);
-      tmpst.insert(r);
+      tmpst.insert({0,R+1,r});
       mptate[c] = tmpst;
     } else {
       mptate[c].insert(r);
