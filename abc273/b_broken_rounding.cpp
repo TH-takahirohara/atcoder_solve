@@ -20,7 +20,6 @@ int main() {
   ll X;
   int K;
   cin >> X >> K;
-  // int tmpx = X;
 
   rep(i,0,K) {
     ll tmpx = X;
@@ -28,15 +27,12 @@ int main() {
       tmpx /= 10;
     }
     ll tar = tmpx % 10; 
-    // cout << "tar: " << tar << endl;
     if (tar >= 5) {
       X += rui(i+1);
       X -= tar * rui(i);
     } else {
       X -= tar * rui(i);
     }
-    // X /= 10;
-    // cout << X << endl;
   }
   cout << X << endl;
 }

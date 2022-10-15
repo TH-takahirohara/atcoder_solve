@@ -17,7 +17,6 @@ int main() {
   set<int> st;
   rep(i,0,N) st.insert(A.at(i));
 
-  // vector<int> cnt(200005);
   map<int,int> mp;
   rep(i,0,N) {
     mp[A.at(i)]++;
@@ -32,7 +31,6 @@ int main() {
     else ans.at(sz-i-1) = 0;
   }
 
-  // reverse(ans.begin(), ans.end());
   rep(i,0,N) {
     cout << ans.at(i) << endl;
   }
