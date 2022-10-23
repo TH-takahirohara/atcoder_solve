@@ -17,6 +17,9 @@ int main() {
   map<ll,ll> mp;
   set<ll> st;
 
+  // setに0~N-1の値を入れておき、x % Nの値以上の数があったら、それを添字としたAiに値を入れ、
+  // setからx % Nを消すようにする。
+  // x % N の値がN-1の時などに再度0に戻る必要があるので、2倍しておく
   rep(i,0,2*N) st.insert(i);
 
   rep(i,0,Q) {
