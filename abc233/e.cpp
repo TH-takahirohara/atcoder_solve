@@ -12,22 +12,20 @@ int main() {
   string x;
   cin >> x;
 
-  reverse(x.begin(), x.end());
-  vector<int> vec(1000000);
+  vector<int> rui(x.size()+1);
   rep(i,0,x.size()) {
-    vec.at(i) = (int)(x.at(i) - '0');
+    rui.at(i + 1) = rui.at(i) + (int)(x.at(i) - '0');
   }
 
-  rep(i,1,x.size()) {
-    rep(j,i,x.size()+1) {
-      int pl = 0;
-      if (j >= 0 && j < x.size()) pl = (int)(x.at(j) - '0');
-      vec.at(j-i) += pl;
-      if (vec.at(j-i) > 9)  {
-        vec.at(j-i+1)++;
-        vec.at(j-i) -= 10;
-      }
-    }
+  vector<int> vec(1000000);
+  rep(i,0,x.size()) {
+    vec.at(i) = rui.at(x.size() - i);
+  }
+
+  rep(i,0,x.size()) {
+    int v = vec.at(i);
+    vec.at(i+1) += v / 10;
+    vec.at(i) = v % 10;
   }
 
   string ans = "";
