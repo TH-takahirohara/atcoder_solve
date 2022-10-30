@@ -1,3 +1,4 @@
+// クラスカル法を若干応用して解いた
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
