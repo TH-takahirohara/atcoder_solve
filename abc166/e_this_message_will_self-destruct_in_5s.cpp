@@ -15,16 +15,14 @@ int main() {
   vector<ll> A(N);
   rep(i,0,N) cin >> A.at(i);
 
-  map<ll,ll> mp_ipa, mp_ima;
+  map<ll,ll> mp_ipa;
   rep(i,0,N) {
     mp_ipa[i+A.at(i)]++;
-    mp_ima[i-A.at(i)]++;
   }
 
   ll ans = 0;
   rep(i,0,N) {
     if (mp_ipa.count(-A.at(i)+i)) ans += mp_ipa.at(-A.at(i)+i);
-    if (mp_ima.count(A.at(i)+i)) ans += mp_ima.at(A.at(i)+i);
   }
-  cout << ans / 2 << endl;
+  cout << ans << endl;
 }
