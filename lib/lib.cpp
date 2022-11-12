@@ -98,6 +98,11 @@ long long modpow(long long a, long long n, long long mod) {
     return res;
 }
 
+// 逆元を求める関数（フェルマーの小定理）
+// ll modinv(ll a, ll m) {
+//   return modpow(a, m-2, m);
+// }
+
 // 第1引数の参照に、比較して小さい方の値を代入する
 template<class T> bool chmin(T& a, T b) {
   if (a > b) {
