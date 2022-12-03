@@ -1,3 +1,4 @@
+// 確率、期待値に関する問題
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
