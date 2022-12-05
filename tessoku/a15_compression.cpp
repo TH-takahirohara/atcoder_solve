@@ -1,4 +1,5 @@
 // 座標圧縮
+// 参考: https://qiita.com/ysk24ok/items/30ae72f4f1060b088588
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
