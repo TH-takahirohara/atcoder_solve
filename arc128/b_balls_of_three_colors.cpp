@@ -1,4 +1,3 @@
-// 解説放送を見てから実装してAC
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
