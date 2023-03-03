@@ -14,8 +14,6 @@ int main() {
   string S;
   cin >> S;
 
-  // cout << int('B' - 'A') << endl;
-
   rep(i,0,S.size()) {
     if (int(S.at(i) - 'A') >= 0 && int(S.at(i) - 'A') <= 26) {
       cout << i + 1 << endl;
