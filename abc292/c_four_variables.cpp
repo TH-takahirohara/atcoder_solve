@@ -32,10 +32,6 @@ int main() {
     if (ans != 1) vec.at(a) = ans;
   }
 
-  // rep(i,0,N) {
-  //   cout << vec.at(i) << " ";
-  // }
-  // cout << endl;
   ull answer = 0;
   for (ull i=1; i < N; i++) {
     answer += vec.at(i) * vec.at(N-i);
