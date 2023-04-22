@@ -70,12 +70,14 @@ int main() {
       can = true;
       is_kuro.at(v) = true;
     }
+    // 黒にできる頂点がない場合（全て白でなければならないケース）はNo
     if (!can) {
       cout << "No" << endl;
       return 0;
     }
   }
 
+  // 黒にできる頂点は全て黒にする（白の頂点のみになって条件外となるケースを避けるため）
   rep(i,0,N) {
     if (!siro.count(i)) is_kuro.at(i) = true;
   }
