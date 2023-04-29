@@ -1,4 +1,4 @@
-// 確率とメモ化再帰の組み合わせ
+// 確率とメモ化再帰（動的計画法）の組み合わせ
 // 解説後AC
 #include <bits/stdc++.h>
 #include <atcoder/all>
