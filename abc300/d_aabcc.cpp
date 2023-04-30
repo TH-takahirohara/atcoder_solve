@@ -13,6 +13,7 @@ template<class T> bool chmax(T& a, T b) {if (a < b) {a = b; return true;} else r
 int main() {
   ll N;
   cin >> N;
+  // エラトステネスのふるい
   vector<bool> vec(300005, true);
   vec.at(0) = false;
   vec.at(1) = false;
