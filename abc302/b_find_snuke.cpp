@@ -8,8 +8,6 @@ typedef unsigned long long ull;
 #define fore(i,a) for(auto &i:a)
 // 桁数指定： cout << fixed << setprecision(10)
 
-// vector<int> dr = {}
-
 int main() {
   int R, C;
   cin >> R >> C;
