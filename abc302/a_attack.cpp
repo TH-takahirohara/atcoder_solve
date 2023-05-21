@@ -11,6 +11,5 @@ typedef unsigned long long ull;
 int main() {
   ll A, B;
   cin >> A >> B;
-
   cout << (A+B-1)/B << endl;
 }
