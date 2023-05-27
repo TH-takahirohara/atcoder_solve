@@ -12,8 +12,7 @@ int main() {
   int N, M, H, K;
   string S;
   cin >> N >> M >> H >> K >> S;
-  // vector<int> X(M), Y(M);
-  // rep(i,0,M) cin >> X.at(i) >> Y.at(i);
+
   set<pair<int,int>> st;
   rep(i,0,M) {
     int x,y;
