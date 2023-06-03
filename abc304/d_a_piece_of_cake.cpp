@@ -17,7 +17,6 @@ int main() {
   rep(i,0,N) cin >> X.at(i) >> Y.at(i);
 
   int A, B;
-  // vector<int> a(A), b(B);
   cin >> A;
   vector<int> a(A);
   rep(i,0,A) cin >> a.at(i);
@@ -25,12 +24,10 @@ int main() {
   vector<int> b(B);
   rep(i,0,B) cin >> b.at(i);
 
-  // vector<vector<int>> ichi(B+1, vector<int>(A+1));
   map<pair<int,int>,int> mp;
   rep(i,0,N) {
     int numx = lower_bound(a.begin(), a.end(), X.at(i)) - a.begin();
     int numy = lower_bound(b.begin(), b.end(), Y.at(i)) - b.begin();
-    // ichi.at(numy).at(numx)++;
     mp[make_pair(numx, numy)] += 1;
   }
 
