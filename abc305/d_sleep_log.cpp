@@ -29,7 +29,6 @@ int main() {
     int idx_l = upper_bound(A.begin(), A.end(), l) - A.begin() - 1;
     int idx_r = upper_bound(A.begin(), A.end(), r) - A.begin() - 1;
 
-    // cout << idx_l << " " << idx_r << endl;
     ll lsum = 0, rsum = 0;
     if (idx_l % 2 == 0) lsum = rui.at(idx_l);
     else lsum = rui.at(idx_l) + (l - A.at(idx_l));
