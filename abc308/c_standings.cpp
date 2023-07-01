@@ -1,3 +1,5 @@
+// sortに渡すソート条件を指定する
+// 参考: https://blog.cafeform.com/?p=1453
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
