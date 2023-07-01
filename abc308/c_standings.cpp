@@ -10,15 +10,12 @@ typedef unsigned long long ull;
 
 struct bunsuu {
   ll bunsi, bunbo, idx;
-  // bunsuu(ll bunsi, ll bunbo) : 
 };
 
 bool comp(bunsuu& lh, bunsuu& rh) {
   if (lh.bunsi * rh.bunbo == rh.bunsi * lh.bunbo) {
-    // cout << "test" << endl;
     return lh.idx < rh.idx;
   }
-  // cout << "test2" << endl;
   return lh.bunsi * rh.bunbo > rh.bunsi * lh.bunbo;
 }
 
