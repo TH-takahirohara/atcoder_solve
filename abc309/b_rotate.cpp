@@ -15,8 +15,6 @@ int main() {
   rep(i,0,N) cin >> A.at(i);
   vector<string> B = A;
 
-  // B.at(0).at(0) = A.at(0).at(1);
-  // B.at()
   // 一番左
   rep(i,0,N-1) {
     B.at(i).at(0) = A.at(i+1).at(0);
