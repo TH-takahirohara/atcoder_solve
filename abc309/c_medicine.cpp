@@ -12,8 +12,6 @@ int main() {
   int N;
   ll K;
   cin >> N >> K;
-  // vector<ll> A(N), B(N);
-  // rep(i,0,N) cin >> A.at(i) >> B.at(i);
   vector<pair<ll,ll>> P(N);
   ll sum = 0;
   rep(i,0,N) {
