@@ -21,12 +21,6 @@ int main() {
       cin >> f;
       v.at(j) = f;
     }
-    // set<int> st;
-    // rep(j,0,c) {
-    //   int f;
-    //   cin >> f;
-    //   st.insert(f);
-    // }
     vec.at(i) = make_pair(p, v);
   }
   sort(vec.begin(), vec.end());
