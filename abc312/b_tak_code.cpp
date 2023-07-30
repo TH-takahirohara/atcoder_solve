@@ -16,7 +16,6 @@ int main() {
   
   rep(i,0,R-8) {
     rep(j,0,C-8) {
-      // cout << i+1 << " " << j+1 << endl;
       bool ok = true;
       rep(k,0,3) {
         if (!(S.at(i+k).at(j+0) == '#' && S.at(i+k).at(j+1) == '#' && S.at(i+k).at(j+2) == '#' && S.at(i+k).at(j+3) == '.')) {
