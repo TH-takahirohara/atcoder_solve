@@ -33,11 +33,6 @@ int main() {
         if (i-1 >= 0) dp.at(i-1).at(j+1) = dp.at(i).at(j);
       }
     }
-    // rep(i,0,N) {
-    //   if (S.at(j) == '?') {
-    //     S.at(i-1).at(j)
-    //   }
-    // }
   }
   cout << dp.at(0).at(N-1).val() << endl;
 }
