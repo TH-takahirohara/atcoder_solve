@@ -35,8 +35,6 @@ int main() {
     dai_n = N - shou_n;
   }
 
-  // cout << dai_n << " " << shou_n << endl;
-
   ll ans = 0;
   rep(i,0,N) {
     if (dai_n > 0) {
