@@ -17,7 +17,6 @@ queue<int> que;
 void rec(int v) {
   if (seen.at(v)) return;
   seen.at(v) = true;
-  // st.push(v);
   for (auto nv : G.at(v)) {
     if (seen.at(nv)) continue;
     rec(nv);
@@ -26,9 +25,7 @@ void rec(int v) {
 }
 
 int main() {
-  // int N;
   cin >> N;
-  // vector<vector<int>> G(N);
   G.assign(N, {});
   seen.assign(N, false);
   rep(i,0,N) {
@@ -44,10 +41,6 @@ int main() {
 
   for (auto nv1 : G.at(0)) {
     rec(nv1);
-    // while (!que.empty()) {
-    //   cout << que.front() + 1 << " ";
-    //   que.pop();
-    // }
   }
 
   while (!que.empty()) {
