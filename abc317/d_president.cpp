@@ -34,13 +34,6 @@ int main() {
     }
   }
 
-//   rep(i,0,10) {
-//     rep(j,0,N+1) {
-//       cout << dp.at(i).at(j) << " ";
-//     }
-//     cout << endl;
-//   }
-
   ll ans = 3e18;
   rep(i,kahan,200000) {
     ans = min(ans, dp.at(i).at(N));
