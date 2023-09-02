@@ -1,3 +1,6 @@
+// 大まかな方向性はあっていたが、Nが奇数のケースへの対応ができなかった。
+// Nが奇数のケースでは、いずれかのseenを最初にtrueにするとうまく対処できることに
+// 解説を見て気づき、その後修正してAC
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
