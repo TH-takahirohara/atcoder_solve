@@ -13,7 +13,6 @@ typedef unsigned long long ull;
 
 int N;
 vector<vector<ll>> D;
-// vector<bool> seen;
 ll ans = 0;
 
 void rec(ll sum, vector<bool> seen) {
@@ -45,7 +44,6 @@ void rec(ll sum, vector<bool> seen) {
 int main() {
   cin >> N;
   D.assign(N, vector<ll>(N));
-  // seen.assign(N);
   rep(i,0,N-1) {
     rep(j,0,N-1-i) {
       ll tmp;

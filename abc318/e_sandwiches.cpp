@@ -18,7 +18,6 @@ int main() {
   rep(i,0,N) {
     mp[A.at(i)].push_back(i);
   }
-  // cout << mp[1].size() << endl;
 
   ll ans = 0;
   for (auto p : mp) {
