@@ -19,14 +19,8 @@ int main() {
     }
   }
 
-  // rep(i,0,yaku.size()) {
-  //   cout << yaku.at(i) << " ";
-  // }
-  // cout << endl;
-
   string ans = "";
   rep(i,0,N+1) {
-    // cout << i << endl;
     char c = '-';
     rep(j,0,yaku.size()) {
       if (i % (N / yaku.at(j)) != 0) continue;

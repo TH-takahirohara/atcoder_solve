@@ -36,9 +36,6 @@ int main() {
     cin >> vec.at(i);
   }
 
-  // rep(i,0,9) cout << vec.at(i) << " ";
-  // cout << endl;
-
   vector<int> jun = {0,1,2,3,4,5,6,7,8};
   int al = 9*8*7*6*5*4*3*2*1;
   int sum = 0;
@@ -53,6 +50,6 @@ int main() {
     }
     if (!is_gak) sum++;
   } while (next_permutation(jun.begin(), jun.end()));
-  // cout << sum << endl;
+
   cout << fixed << setprecision(10) << (double)sum / al << endl;
 }

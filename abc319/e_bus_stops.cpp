@@ -29,8 +29,6 @@ int main() {
     saikou = lcm(saikou, P.at(i));
   }
 
-  // cout << "saikou: " << saikou << endl;
-
   vector<ll> jikans(saikou);
   rep(ite,0,(int)saikou) {
     ll time = (ll)ite + X;
