@@ -15,7 +15,6 @@ int main() {
   int ans = 1;
   rep(i,0,S.size()) {
     rep(j,i,S.size()) {
-      // cout << i << " " << j << endl;
       string s = "";
       rep(k,i,j+1) {
         s += S.at(k);

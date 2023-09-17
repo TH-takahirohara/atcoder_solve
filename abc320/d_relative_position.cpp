@@ -27,8 +27,6 @@ int main() {
     G.at(b).push_back(a);
   }
 
-  // cout << "test1" << endl;
-
   vector<bool> seen(N, false);
   queue<int> que;
   que.push(0);
@@ -54,25 +52,4 @@ int main() {
       cout << ans.at(i).first << " " << ans.at(i).second << endl;
     }
   }
-
-  // rep(i,0,N) {
-  //   if (seen1.at(i)) continue;
-    
-  //   queue<int> que;
-  //   que.push(i);
-  //   int cnt = 0;
-  //   while (!que.empty()) {
-  //     int v = que.front();
-  //     que.pop();
-  //     if (seen1.at(v)) continue;
-  //     seen1.at(v) = true;
-  //     cnt++;
-  //     for (auto nv : G.at(v)) {
-  //       que.push(nv);
-  //     }
-  //   }
-  //   if (cnt < N) {
-
-  //   }
-  // }
 }
