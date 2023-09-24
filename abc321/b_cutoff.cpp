@@ -14,7 +14,6 @@ int main() {
   vector<int> A(N-1);
   rep(i,0,N-1) cin >> A.at(i);
 
-  // sort(A.begin(), A.end());
   for (int i=0; i<=100; i++) {
     vector<int> NA = A;
     NA.push_back(i);
