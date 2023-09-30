@@ -42,23 +42,6 @@ vector<vector<bool>> crop(vector<string> vec) {
   return res;
 }
 
-bool umeru(vector<vector<bool>> nfir, vector<vector<bool>> &filled) {
-  rep(i1,0,4-nfir.size()) {
-    rep(i2,0,4-nfir.at(0).size()) {
-      rep(i11,0,nfir.size()) {
-        rep(i22,0,nfir.at(0).size()) {
-          if (!filled.at(i1+i11).at(i2+i22) && nfir.at(i11).at(i22)) {
-            filled.at(i1+i11).at(i2+i22) = true;
-          } else if (filled.at(i1+i11).at(i2+i22) && nfir.at(i11).at(i22)) {
-            return false;
-          }
-        }
-      }
-    }
-  }
-  return true;
-}
-
 vector<vector<bool>> snap(int i, int j, vector<vector<bool>> vec) {
   vector<vector<bool>> res(4, vector<bool>(4, false));
   rep(ite1,0,vec.size()) {
@@ -77,7 +60,6 @@ int main() {
     }
   }
 
-  // vector<int> jun = {0,1,2};
   rep(i,0,4) {
     vector<string> fir = P.at(0);
     rep(iter1,0,i) fir = kaiten(fir);
@@ -98,26 +80,9 @@ int main() {
                 rep(iter3,0,k) thi = kaiten(thi);
                 
                 vector<vector<bool>> nthi = crop(thi);
-                // rep(iterate1,0,nthi.size()) {
-                //   rep(iterate2,0,nthi.at(0).size()) {
-                //     if (nthi.at(iterate1).at(iterate2)) cout << '#';
-                //     else cout << '.';
-                //   }
-                //   cout << endl;
-                // }
-                // cout << endl;
                 rep(k1,0,4-nthi.size()+1) {
                   rep(k2,0,4-nthi.at(0).size()+1) {
                     auto third = snap(k1,k2,nthi);
-                    // cout << "test" << endl;
-                    // rep(iterate1,0,4) {
-                    //   rep(iterate2,0,4) {
-                    //     if (third.at(iterate1).at(iterate2)) cout << '#';
-                    //     else cout << '.';
-                    //   }
-                    //   cout << endl;
-                    // }
-                    // cout << endl;
                     bool can = true;
                     rep(iii,0,4) {
                       rep(jjj,0,4) {
