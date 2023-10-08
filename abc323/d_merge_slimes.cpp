@@ -11,7 +11,6 @@ typedef unsigned long long ull;
 int main() {
   int N;
   cin >> N;
-  // priority_queue<ll, vector<ll>, greater<ll>> pq;
   set<ll> size_st;
   unordered_map<ll,ll> mp;
   rep(i,0,N) {
