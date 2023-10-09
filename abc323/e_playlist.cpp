@@ -1,3 +1,5 @@
+// 確率でDPを行う問題
+// 解説動画を見てAC
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
