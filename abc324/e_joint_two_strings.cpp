@@ -51,22 +51,11 @@ int main() {
 
   sort(ato.begin(), ato.end());
 
-  // rep(i,0,N) {
-  //   cout << mae.at(i) << " ";
-  // }
-  // cout << endl;
-  // rep(i,0,N) {
-  //   cout << ato.at(i) << " ";
-  // }
-  // cout << endl;
-
   ll ans = 0;
   rep(ite,0,N) {
     int num = mae.at(ite);
     int tar = T.size() - num;
-    // cout << "num: " << num << " tar: " << tar << endl;
     ll cnt = ato.size() - (lower_bound(ato.begin(), ato.end(), tar) - ato.begin());
-    // cout << "ite: " << ite << " " << cnt << endl;
     ans += cnt;
   }
   cout << ans << endl;

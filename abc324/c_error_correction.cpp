@@ -26,16 +26,6 @@ int main() {
   vector<int> ans;
   rep(i,0,N) {
     string s = S.at(i);
-    // vector<int> cnts(30);
-    // rep(j,0,s.size()) {
-    //   char c = s.at(i);
-    //   int idx = int(c - 'a');
-    //   cnts.at(idx)++;
-    // }
-    // cout << "s: " << s << endl;
-
-    // if (Td.size() - s.size() >= 2 || s.size() - Td.size() >= 2) continue;
-    // cout << "i: " << i << endl;
     if (Td == s) {
       ans.push_back(i+1);
       continue;
@@ -55,7 +45,6 @@ int main() {
       }
       string Tdc = Td;
       string Tdcn = Tdc.erase(idx,1);
-      // cout << "Tdcn: " << Tdcn << endl;
       bool can = true;
       rep(k,0,s.size()) {
         if (Tdcn.at(k) != s.at(k)) {

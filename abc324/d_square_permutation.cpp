@@ -19,7 +19,6 @@ int main() {
     return 0;
   }
 
-  // ll sn = S;
   string ss = S;
   
   rep(i,0,ss.size()) {
@@ -27,12 +26,6 @@ int main() {
     int n = int(c - '0');
     kazu.at(n)++;
   }
-
-  // cout << "kazu" << endl;
-  // rep(i,0,10) {
-  //   cout << kazu.at(i) << " ";
-  // }
-  // cout << endl;
 
   vector<ll> vec;
   for (ll i=1; i<=5e6; i++) {
@@ -53,14 +46,6 @@ int main() {
       ketan.at(n)++;
     }
 
-    // if (num == 100) {
-    //   cout << "ketan 100" << endl;
-    //   rep(i,0,ketan.size()) {
-    //     cout << ketan.at(i) << " ";
-    //   }
-    //   cout << endl;
-    // }
-
     bool can = true;
     rep(i,0,10) {
       if (i==0) {
@@ -75,7 +60,6 @@ int main() {
     }
     if (can) {
       ans++;
-      // cout << vec.at(ite) << endl;
     }
   }
   cout << ans << endl;
