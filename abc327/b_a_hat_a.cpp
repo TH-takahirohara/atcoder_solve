@@ -13,7 +13,6 @@ int main() {
   cin >> B;
 
   for (ll i=1; i<=15; i++) {
-    // ll j = i;
     ll res = 1;
     for (int j=1; j<=i; j++) {
       res *= i;

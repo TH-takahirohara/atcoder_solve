@@ -44,7 +44,6 @@ int main() {
     while (!que.empty()) {
       int v = que.front();
       que.pop();
-      // if (seen.at(v)) continue;
       seen.at(v) = true;
       for (auto nv : G.at(v)) {
         if (num.at(nv) != -1 && num.at(v) == num.at(nv)) {
