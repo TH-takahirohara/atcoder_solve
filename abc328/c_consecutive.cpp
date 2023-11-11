@@ -21,13 +21,10 @@ int main() {
 
   vector<int> rui(N+1);
   rep(i,0,N) rui.at(i+1) = rui.at(i) + tonari.at(i);
-  // rep(i,0,N+1) cout << rui.at(i) << " ";
-  // cout << endl;
 
   rep(i,0,Q) {
     int l, r;
     cin >> l >> r;
-    // l--; r--;
     cout << rui.at(r) - rui.at(l) << endl;
   }
 }

@@ -14,25 +14,21 @@ int main() {
 
   stack<string> st;
   int i = 0;
-  // cout << "test1" << endl;
   while (i < S.size()) {
     char c = S.at(i);
 
     if (st.empty()) {
-      // cout << "test st emp" << endl;
       string s = "";
       s += c;
       st.push(s);
     } else {
       string tp = st.top();
-      // st.pop();
       if (tp == "A" && c == 'B') {
         st.pop();
         st.push("AB");
       } else if (tp == "AB" && c == 'C') {
         st.pop();
       } else {
-        // st.push(tp);
         string s = "";
         s += c;
         st.push(s);

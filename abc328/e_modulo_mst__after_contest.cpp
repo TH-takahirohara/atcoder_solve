@@ -30,8 +30,6 @@ void rec(ll sum, int seen) {
       if (!(seen & (1 << i))) continue; // 未到達だったらcontinue
       for (auto nv : G.at(i)) {
         if (!(seen & (1 << nv))) {
-          // vector<bool> ns = seen;
-          // ns.at(nv) = true;
           int ns = seen | (1 << nv);
           rec(sum + vec.at(i).at(nv), ns);
         }
@@ -57,8 +55,6 @@ int main() {
     G.at(v).push_back(u);
   }
 
-  // vector<bool> seen(N, false);
-  // seen.at(0) = true;
   int seen = 0;
   seen = seen | (1 << (N-1));
   rec(0, seen);
