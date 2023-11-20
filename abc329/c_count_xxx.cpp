@@ -14,7 +14,6 @@ int main() {
   string S;
   cin >> S;
 
-  // string tmp = "";
   int num = -1;
   char tmp_c;
   set<pair<char,int>> st;

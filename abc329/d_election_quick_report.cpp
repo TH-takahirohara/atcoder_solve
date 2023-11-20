@@ -28,7 +28,6 @@ int main() {
       st.insert(make_pair(-1, hito));
       cnt.at(hito)--;
     } else {
-      // st.erase(make_pair(cnt_ima, hito));
       int cnt_new = cnt_ima - 1;
       st.insert(make_pair(cnt_new, hito));
       cnt.at(hito)--;
