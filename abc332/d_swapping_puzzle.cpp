@@ -14,7 +14,6 @@ vector<vector<int>> A, B;
 bool hantei(vector<int> &tate, vector<int> &yoko) {
   rep(i,0,R) {
     rep(j,0,C) {
-      // cout << tate.at(i) << " " << yoko.at(j) << endl;
       if (A.at(tate.at(i)).at(yoko.at(j)) != B.at(i).at(j)) {
         return false;
       }
@@ -40,27 +39,8 @@ int bubble_num(vector<int> _arr) {
   return cnt;
 }
 
-// int bubble_num(vector<int> _arr) {
-//   vector<int> arr = _arr;
-//   int n = arr.size();
-//   int cnt = 0;
-//   for (int lp=0; lp < n; lp++) {
-//     bool flag = false;
-//     for (int i=0; i < n-1; i++) {
-//       if (arr.at(i) > arr.at(i+1)) {
-//         flag = true;
-//         cnt++;
-//         swap(A.at(i), A.at(i+1));
-//       }
-//     }
-//     if (!flag) break;
-//   }
-//   return cnt;
-// }
-
 int main() {
   cin >> R >> C;
-  // vector<vector<int>> A(R, vector<int>(C)), B(R, vector<int>(C));
   A.assign(R, vector<int>(C));
   B.assign(R, vector<int>(C));
   rep(i,0,R) {
@@ -82,13 +62,10 @@ int main() {
     yoko.at(i) = i;
   }
 
-  // cout << "test" << endl;
-
   int ans = 1e9;
   do {
     do {
       if (hantei(tate, yoko)) {
-        // cout << "han" << endl;
         int tate_num = bubble_num(tate);
         int yoko_num = bubble_num(yoko);
         ans = min(ans, tate_num + yoko_num);
