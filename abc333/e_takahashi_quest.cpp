@@ -20,7 +20,6 @@ int main() {
   reverse(T.begin(), T.end());
   reverse(X.begin(), X.end());
 
-  // int ans = 0;
   vector<int> mst(N+1);
   vector<int> kusuri(N+1);
   vector<int> pors; // ポーション拾ったかどうか
@@ -28,18 +27,11 @@ int main() {
     if (T.at(i) == 2) {
       int x = X.at(i);
       mst.at(x)++;
-      // if (kusuri.at(X.at(i)) > 0) {
-      //   kusuri.at(X.at(i))--;
-      //   ans--;
-      // } else {
-      //   mst.at(X.at(i))++;
-      // }
     } else { // ポーション
       int x = X.at(i);
       if (mst.at(x) > 0) {
         kusuri.at(x)++;
         mst.at(x)--;
-        // ans++;
         pors.push_back(1);
       } else {
         pors.push_back(0);
@@ -66,8 +58,6 @@ int main() {
         if (pors.at(pos_idx) == 1) { // 拾った
           ans++;
           answer = max(answer, ans);
-          // kusu.at(X.at(i))++;
-          // pos_idx++;
         }
         pos_idx++;
       } else { // モンスター
