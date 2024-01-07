@@ -17,8 +17,6 @@ int main() {
   
   vector<vector<int>> vec(N, vector<int>(N));
   vec.at(0).at(0) = 1;
-  // vec.at((N+1)/2).at((N+1)/2) = -1;
-  // vector<vector<bool>> seen(N, vector<int>(N, false));
 
   int idx = 0;
   int x = 0;
@@ -31,7 +29,6 @@ int main() {
     }
     int karix = x+dx.at(idx);
     int kariy = y+dy.at(idx);
-    // cout << "karix,y: "<< karix << " " << kariy << endl;
     
     if (vec.at(karix).at(kariy) > 0) {
       idx = (idx+1) % 4;
@@ -40,17 +37,14 @@ int main() {
     karix = x+dx.at(idx);
     kariy = y+dy.at(idx);
 
-    // cout << "karix,y: "<< karix << " " << kariy << endl;
-    // cout << "cnt: " << cnt << endl;
     vec.at(karix).at(kariy) = cnt;
     x = karix;
     y = kariy;
-    // cout << x << " " << y << endl;
   }
 
   rep(i,0,N) {
     rep(j,0,N) {
-      if (i == (N)/2 && j == (N)/2) {
+      if (i == N/2 && j == N/2) {
         cout << "T";
       } else {
         cout << vec.at(i).at(j);
