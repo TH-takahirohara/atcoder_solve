@@ -63,15 +63,7 @@ int main() {
       auto nx_batu_idx = *lower_bound(b_yoko.begin(), b_yoko.end(), j);
       if (nx_batu_idx - j >= K) {
         int k_idx = j + K -1;
-        // rep(k,0,C+1) {
-        //   cout << rui_yoko.at(i).at(k) << " ";
-        // }
-        // cout << endl;
         int maru = rui_yoko.at(i).at(k_idx+1) - rui_yoko.at(i).at(j+1);
-        // cout << "j rui: " << rui_yoko.at(i).at(j) << endl;
-        // cout << "k_idx rui: " << rui_yoko.at(i).at(k_idx) << endl;
-        // cout << "maru: " << maru << endl;
-        // int tasu = 0;
         if (S.at(i).at(j) == 'o') maru++;
         tmp = min(tmp, K - maru);
       }
@@ -82,7 +74,6 @@ int main() {
       if (nx_tate_batu_idx - i >= K) {
         int k_idx = i + K - 1;
         int maru = rui_tate.at(j).at(k_idx+1) - rui_tate.at(j).at(i+1);
-        // int tasu = 0;
         if (S.at(i).at(j) == 'o') maru++;
         tmp = min(tmp, K - maru);
       }

@@ -37,7 +37,6 @@ int main() {
     cout << now << " ";
     cnt++;
     if (cnt == N) break;
-    // if (now == N) break;
   }
   cout << endl;
 }
