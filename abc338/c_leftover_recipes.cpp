@@ -22,7 +22,6 @@ int main() {
     if (A.at(i) == 0) continue;
     num_a = min(num_a, Q.at(i) / A.at(i));
   }
-  // cout << "num_a: " << num_a << endl;
 
   int ans = 0;
   rep(ite,0,num_a+1) {
@@ -35,7 +34,6 @@ int main() {
       if (B.at(j) == 0) continue;
       num_b = min(num_b, max(0, Qd.at(j) / B.at(j)));
     }
-    // cout << " ite, num_b: " << ite << " " << num_b << endl;
     ans = max(ans, ite + num_b);
   }
   cout << ans << endl;
