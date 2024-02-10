@@ -1,3 +1,4 @@
+// ダイクストラ法を用いたオーソドックスな問題
 #include <bits/stdc++.h>
 #include <atcoder/all>
 using namespace std;
@@ -23,8 +24,6 @@ template<class T> bool chmin(T &a, T b) {
   }
   else return false;
 }
-
-
 
 int main() {
   int N;
