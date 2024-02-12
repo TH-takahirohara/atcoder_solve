@@ -9,7 +9,6 @@ typedef unsigned long long ull;
 // 桁数指定： cout << fixed << setprecision(10)
 
 map<ull,ull> mp;
-// ull ans;
 
 ull rec(ull n) {
   if (mp.count(n)) {
@@ -24,9 +23,6 @@ ull rec(ull n) {
     nx1 = n / 2;
     nx2 = n / 2 + 1;
   }
-  // ull nx1 = floor(n / 2.0);
-  // ull nx2 = ceil(n / 2.0);
-  // cout << "n: " << n << " " << nx1 << " " << nx2 << endl;
   ull out1 = rec(nx1);
   if (!mp.count(nx1)) mp[nx1] = out1;
   ull out2 = rec(nx2);
@@ -39,10 +35,8 @@ int main() {
   ull N;
   cin >> N;
 
-  // ans = 0;
   mp[0] = 0;
   mp[1] = 0;
-  // mp[2] = 2;
   
   cout << rec(N) << endl;
 }

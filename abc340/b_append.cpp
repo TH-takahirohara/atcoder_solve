@@ -23,7 +23,6 @@ int main() {
     } else {
       int k;
       cin >> k;
-      // k--;
       cout << vec.at(vec.size() - k) << endl;
     }
   }
