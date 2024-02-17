@@ -13,15 +13,12 @@ int main() {
   cin >> N >> M >> K;
 
   ull kou = N / __gcd(N, M) * M;
-  // cout << "kou " << kou << endl;
 
   ull ng = 0;
   ull ok = 2e18;
   while (ok - ng > 1) {
     ull mid = (ng + ok) / 2;
-    // cout << "mid: " << mid << endl;
     ull kosuu = (mid / N) + (mid / M) - 2 * (mid / kou);
-    // cout << "kosuu: " << kosuu << endl;
     if (kosuu < K) {
       ng = mid;
     } else if (kosuu > K) {

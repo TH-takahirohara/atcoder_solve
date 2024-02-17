@@ -40,7 +40,6 @@ int main() {
         st.insert(r+1);
       }
     } else { // fl == 2
-      // s.size() - (s.upper_bound(l) - s.begin());
       if (*st.upper_bound(l) == *st.upper_bound(r)) {
         cout << "Yes" << endl;
       } else {

@@ -16,13 +16,10 @@ int main() {
   vector<string> S(R);
   rep(i,0,R) cin >> S.at(i);
 
-  // cout << "test1" << endl;
-
   int ans = 0;
   rep(r,0,R) {
     rep(c,0,C) {
       if (S.at(r).at(c) == '#') continue;
-      // cout << "r,c: " << r << " " << c << endl;
       int nr = r;
       int nc = c;
       bool can = true;
@@ -32,7 +29,6 @@ int main() {
         else if (ch == 'R') nc++;
         else if (ch == 'U') nr--;
         else nr++;
-        // cout << "nr,nc: " <<  nr << " " << nc << endl;
         if (nr < 0 || nr >= R || nc < 0 || nc >= C) {
           can = false;
           break;
