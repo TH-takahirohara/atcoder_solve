@@ -29,8 +29,6 @@ int main() {
   vector<vector<int>> dp(T_sz+1, vector<int>(N+1, 1e9));
   dp.at(0).at(0) = 0;
 
-  // cout << "test" << endl;
-
   rep(ite,0,N) {
     if (ite == 0) { // 1群目
       for (string s : S.at(0)) {
@@ -40,13 +38,11 @@ int main() {
         }
       }
     } else { // 2群目以降
-      // cout << "2test" << endl;
       rep(i,0,T_sz+1) { // Tの文字の位置 (idx start 1)
         if (dp.at(i).at(ite-1) > 5e8) continue;
 
         dp.at(i).at(ite) = min(dp.at(i).at(ite), dp.at(i).at(ite-1));
         for (string s : S.at(ite)) {
-          // if ((i+1) + s.size() > T_sz) continue;
           if (i + s.size() > T_sz) continue;
           if (T.substr(i, s.size()) == s) {
             dp.at(i + s.size()).at(ite) = min(dp.at(i + s.size()).at(ite), dp.at(i).at(ite - 1) + 1);
@@ -55,13 +51,6 @@ int main() {
       }
     }
   }
-
-  // rep(i,0,T_sz+1) {
-  //   rep(j,0,N) {
-  //     cout << dp.at(i).at(j) << " ";
-  //   }
-  //   cout << endl;
-  // }
 
   if (dp.at(T_sz).at(N - 1) > 5e8) cout << -1 << endl;
   else cout << dp.at(T_sz).at(N - 1) << endl;
