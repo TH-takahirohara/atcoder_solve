@@ -24,11 +24,6 @@ int main() {
     }
   }
 
-  // rep(i,0,6) {
-  //   cout << rui.at(0).at(i) << " ";
-  // }
-  // cout << endl;
-
   ll ans = 0;
 
   map<int,int> mp;
@@ -45,12 +40,9 @@ int main() {
   }
 
   rep(i,0,S.size()) {
-    // cout << "i :" << i << endl;
     int idx = int(S.at(i) - 'a');
     int kosuu = rui.at(idx).at(S.size()) - rui.at(idx).at(i);
-    // cout << kosuu << endl;
     int betu = (S.size() - i - 1) - kosuu;
-    // cout << betu << endl;
     ans += betu;
   }
   cout << ans << endl;

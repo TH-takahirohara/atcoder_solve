@@ -11,7 +11,6 @@ typedef unsigned long long ull;
 int N, R, C;
 
 bool hantei(vector<pair<int,int>> &tairu_arr) {
-  // if (tairu_arr.size() == 3 && tairu_arr.at(0) == make_pair(3,3) && tairu_arr.at(1) ==)
   vector<vector<int>> masu(R, vector<int>(C));
   int idx = 0;
   rep(r,0,R) {
@@ -82,24 +81,6 @@ int main() {
         }
       }
     } while (next_permutation(idxs.begin(), idxs.end()));
-    // 回転考慮
-    // int sz = tairu_arr.size();
-    // for (int k=0; k < (1 << sz); k++) {
-    //   vector<pair<int,int>> new_tairu_arr;
-    //   for (int l=0; l < sz; l++) {
-    //     auto pa = tairu_arr.at(l);
-    //     if (k & (1 << l)) {
-    //       new_tairu_arr.push_back(make_pair(pa.second, pa.first));
-    //     } else {
-    //       new_tairu_arr.push_back(pa);
-    //     }
-    //   }
-
-    //   if (hantei(new_tairu_arr)) {
-    //     cout << "Yes" << endl;
-    //     return 0;
-    //   }
-    // }
   }
   cout << "No" << endl;
 }
