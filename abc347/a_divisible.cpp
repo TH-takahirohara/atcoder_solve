@@ -15,8 +15,6 @@ int main() {
   rep(i,0,N) cin >> A.at(i);
   vector<int> anses;
   rep(i,0,N) {
-    // int a;
-    // cin >> a;
     if (A.at(i) % K == 0) {
       anses.push_back(A.at(i) / K);
     }
