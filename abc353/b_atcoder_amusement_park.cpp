@@ -24,7 +24,6 @@ int main() {
     } else {
       emp -= tugi;
     }
-    // cout << "cnt: " << cnt << ", emp: " << emp << endl;
   }
   if (emp < K) cnt++;
   cout << cnt << endl;
